@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CROSS WORLD</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>CROSS WORLD</h1>
+    <nav>
+      <a href="#subjects">Subjects</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="stock.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="hero-overlay"></div>
+
+  <section class="hero-content">
+    <h2 class="animated-text">Welcome to CROSS WORLD</h2>
+    <p class="para-sec">Created by <strong>Amna Sattar</strong> — Explore business classes, subjects, and creative projects.</p>
+    <button onclick="scrollToSection('projects')">View Projects</button>
+  </section>
+
+  <!-- Subjects -->
+  <section id="subjects">
+    <h2>All Business Classes & Subjects</h2>
+    <ul>
+      <li>Marketing & Branding</li>
+      <li>Finance & Accounting</li>
+      <li>Human Resource Management</li>
+      <li>Entrepreneurship</li>
+      <li>International Business</li>
+      <li>Information Technology</li>
+    </ul>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Our Projects</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3><a href="https://amnasattar24.github.io/TIC-TAC-TOE-GAME/" target="_blank">Tik Tac Toy Game</a></h3>
+        <p>Tic-Tac-Toe is a minimalist strategy game where foresight and symmetry decide victory long before the final move is played.</p>
+      </div>
+      <div class="card">
+        <h3><a href="https://amnasattar24.github.io/rock-paper-game/" target="_blank">Rock Paper Scissors Game</a></h3>
+        <p>Rock-Paper-Scissors is a simple yet strategic hand game where chance and human psychology intertwine, as each choice simultaneously defeats one option while being vulnerable to another.</p>
+      </div>
+      <div class="card">
+        <h3><a href="https://amnasattar24.github.io/cruncy/" target="_blank">Currency Exchange</a></h3>
+        <p>Currency exchange is the dynamic process through which the value of one nation’s money is converted into another, reflecting global trade, economic strength, and market confidence.</p>
+      </div>
+      <div class="card">
+        <h3><a href="sale dashboard.xlsx" target="_blank">Open Excel Workbook</a></h3>
+        <p>This Excel workbook transforms raw data into actionable insights through structured analysis, dynamic formulas, and visual reporting, enabling smarter decision-making and efficient business management.</p>
+      </div>
+      <div class="card">
+        <h3><a href="vs_code.pdf" target="_blank">Open VS Code project</a></h3>
+        <p>This presentation guide provides step-by-step instructions for setting up and using Visual Studio Code effectively for development tasks.</p>
+      </div>
+    </div>
+  </section>
+
+<!-- payment section -->
+
+  <section id="payment">
+  <h2>Payment Options</h2>
+
+  <div class="payment-buttons">
+    <button class="payBtn" type="button" onclick="openPaymentCard('WhatsApp')">WhatsApp</button>
+    <button class="payBtn" type="button" onclick="openPaymentCard('NayaPay')">NayaPay</button>
+    <button class="payBtn" type="button" onclick="openPaymentCard('Easypaisa')">Easypaisa</button>
+  </div>
+
+  <!-- Payment Card Popup -->
+<div id="paymentCard" class="payment-card">
+  <div class="card-content">
+    <span class="close-btn" onclick="closePaymentCard()">×</span>
+    <h3 id="cardTitle">Choose Your Plan</h3>
+
+    <div class="plan">
+      <h4>Simple Plan</h4>
+      <p>$7.5</p>
+      <button class="selectBtn" onclick="selectPlan('Simple Plan', 7.5)">Select</button>
+    </div>
+
+    <div class="plan premium">
+      <h4>Premium Plan</h4>
+      <p>$15</p>
+      <button class="selectBtn" onclick="selectPlan('Premium Plan', 15)">Select</button>
+    </div>
+
+    <div id="paymentInfo" class="payment-info">
+      <p><strong>Payment Number:</strong> <span id="payNumber">0336-7748466 EP,03256169193 NP</span></p>
+      <p><strong>Account Name:</strong> Amna Sattar</p>
+      <p><strong>Note:</strong> After payment, send screenshot on WhatsApp.</p>
+    </div>
+
+    <div id="qrCode" class="qr-code">
+      <img id="qrImg" src="easypaisa.jpeg,nayapay.jpeg" alt="QR Code">
+    </div>
+
+    <!-- Confirmation Form -->
+    <form id="confirmForm" class="confirm-form">
+      <h4>Payment Confirmation</h4>
+      <input type="text" id="confName" placeholder="Your Name">
+      <input type="email" id="confEmail" placeholder="Your Email">
+      <textarea id="confMsg" placeholder="Write your message or payment screenshot link"></textarea>
+      <button class="selectBtn" onclick="sendConfirmation()">Send Confirmation</button>
+    </form>
+  </div>
+</div>
+
+        <!-- You can add QR code image here -->
+        <!-- <img src="qr-placeholder.png" alt="QR Code">
+      </div>
+    </div>
+  </div> -->
+</section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+
+    <form onsubmit="return validateForm()">
+      <input type="text" id="name" placeholder="Your Name" />
+      <input type="email" id="email" placeholder="Your Email" />
+      <textarea id="message" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+    <!-- Social Media Buttons -->
+
+  <div class="social-links">
+  <a href="https://www.facebook.com/share/1bKBGvUmNs/" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+     
+  </a>
+  <a href="https://www.linkedin.com/in/amna-sattar-5746a2369?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn">
+     
+  </a>
+  <a href="https://www.instagram.com/p__ri__n_____cess?igsh=MWhyenA0bGFmbGloNQ==" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
+    
+  </a>
+  <a href="https://wa.me/message/LAML4NH32SP6N1" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+    
+  </a>
+</div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 CROSS WORLD | Created by Amna Sattar</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
